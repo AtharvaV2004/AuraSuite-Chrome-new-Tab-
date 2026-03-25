@@ -19,7 +19,11 @@ import {
   SkipForward,
   Activity,
   Pin,
-  Quote
+  Quote,
+  Layers,
+  Bot,
+  Brain,
+  BookOpen
 } from 'lucide-react';
 import { Sidebar } from '@/components/Sidebar';
 import { TopNav } from '@/components/TopNav';
@@ -94,28 +98,30 @@ export default function HomePage() {
 
             <div className="flex gap-8 overflow-x-auto pb-8 no-scrollbar">
               {[
-                { icon: Youtube, label: 'YouTube', color: '#FF0000', active: true },
-                { icon: Mail, label: 'Gmail', color: '#FFD700' },
-                { icon: MessageSquare, label: 'WhatsApp', color: '#4ADE80' },
-                { icon: CloudIcon, label: 'Drive', color: '#F59E0B' },
-                { icon: Music, label: 'Spotify', color: '#22C55E' },
-                { icon: FileText, label: 'Notion', color: '#FFFFFF' },
+                { icon: Youtube, label: 'YouTube', color: '#FF0000', active: true, url: 'https://youtube.com' },
+                { icon: Layers, label: 'Google Stitch', color: '#4285F4', url: 'https://google.com' },
+                { icon: Bot, label: 'Google AI Studio', color: '#F4B400', url: 'https://aistudio.google.com' },
+                { icon: Brain, label: 'DeepSeek', color: '#4ADE80', url: 'https://chat.deepseek.com' },
+                { icon: BookOpen, label: 'PW Physics Wallah', color: '#FFFFFF', url: 'https://pw.live' },
               ].map((node, i) => (
-                <motion.div 
+                <motion.a 
                   key={i}
+                  href={node.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
-                  className="flex-none group cursor-pointer"
+                  className="flex-none group cursor-pointer block"
                 >
                   <div className="w-32 h-32 liquid-glass rounded-[2.5rem] flex flex-col items-center justify-center border border-white/10 group-hover:border-primary/60 transition-all duration-500 relative">
                     <node.icon size={36} style={{ color: node.color }} className="drop-shadow-[0_0_12px_rgba(255,215,0,0.2)]" />
-                    <span className="text-[10px] mt-4 font-label uppercase tracking-widest text-on-surface-variant group-hover:text-primary transition-colors font-bold">
+                    <span className="text-[10px] mt-4 font-label uppercase tracking-widest text-on-surface-variant group-hover:text-primary transition-colors font-bold text-center leading-tight px-2">
                       {node.label}
                     </span>
                     {node.active && (
                       <div className="absolute top-4 right-4 w-2 h-2 bg-primary rounded-full animate-ping" />
                     )}
                   </div>
-                </motion.div>
+                </motion.a>
               ))}
             </div>
           </section>
