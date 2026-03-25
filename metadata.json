@@ -1,0 +1,5 @@
+{
+  "name": "AuraSuite",
+  "description": "A premium, curated digital workspace for the modern professional.",
+  "requestFramePermissions": ["geolocation"]
+}

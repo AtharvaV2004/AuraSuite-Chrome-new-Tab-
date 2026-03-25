@@ -1,0 +1,1 @@
+self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[9766,[],\"\"]\n3:I[8924,[],\"\"]\n4:I[4431,[],\"OutletBoundary\"]\n6:I[5278,[],\"AsyncMetadataOutlet\"]\n8:I[4431,[],\"ViewportBoundary\"]\na:I[4431,[],\"MetadataBoundary\"]\nb:\"$Sreact.suspense\"\nd:I[7150,[],\"\"]\n:HL[\"/next/static/css/188be9f6bcb034e8.css\",\"style\"]\n"])

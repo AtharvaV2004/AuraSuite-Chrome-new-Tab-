@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Digital Curator New Tab",
+  "version": "1.0",
+  "description": "Premium curated digital workspace replacing Chrome's default new tab.",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": []
+}
